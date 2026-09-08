@@ -1,8 +1,8 @@
 Pfsense default IP configuration:
 
-![](converted/media/image1.png){width="6.268055555555556in" height="3.426388888888889in"}
+![](media/image1.png){width="6.268055555555556in" height="3.426388888888889in"}
 
-We must chang the IP configuration to allow connectivity with the staff and pfsense:
+We must change the IP configuration to allow connectivity with the staff and pfsense:
 
 ![](converted/media/image2.png){width="6.268055555555556in" height="3.60625in"}
 
