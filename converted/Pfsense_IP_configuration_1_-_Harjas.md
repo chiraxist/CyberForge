@@ -4,7 +4,7 @@ Pfsense default IP configuration:
 
 We must change the IP configuration to allow connectivity with the staff and pfsense:
 
-![](converted/media/image2.png){width="6.268055555555556in" height="3.60625in"}
+![](media/image2.png)
 
 Changed the IP configuration:
 
