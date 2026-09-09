@@ -6,7 +6,7 @@ Click on the tools menu then on 'Add Roles and Features'.
 
 ![](media/image1.png)
 
-Selected Active Directory Domain Services and DNS Server then click Next. Skip features.
+Select Active Directory Domain Services and DNS Server then click Next. Skip features.
 
 ![](media/image2.png)
 
