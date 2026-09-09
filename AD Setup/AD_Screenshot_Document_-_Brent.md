@@ -2,60 +2,63 @@
 
 ## Adding Roles and Features
 
+Here I clicked on the tools menu the clicked on 'Add Roles and Features'.
+
 ![](media/image1.png)
 
-Here I clicked on the tools menu the clicked on 'Add Roles and Features'.
+Selected Active Directory Domain Services and DNS Server then click Next. Skip features.
 
 ![](media/image2.png)
 
-Selected Active Directory Domain Services and DNS Server the click next. Skip features.
+It will start installing. When it's finished, select Close.
 
 ![](media/image3.png)
 
-Will start installing, after it's done click close.
-
 ## Setting up Domain
-
-![](media/image4.png)
 
 Promote the Windows Server 2012 machine to be domain controller.
 
+![](media/image4.png)
+
+Below is a screenshot of all the selected options to set. Click next.
+
 ![](media/image5.png)
 
-Here's a review of all the options I set, click next.
+Confirm the correct prerequisites are checked and select Install.
 
 ![](media/image6.png)
 
-Prerequisite check, click on Install.
+The Machine will restart. After a restart, the Domain will appear on the logon screen.
 
 ![](media/image7.png)
 
-Machine will restart, after a restart we will see the Domain on the logon screen.
+The domain will be up and running.
 
 ![](media/image8.png)
 
-Here we can see the domain up and running.
 
 ## Configuring DNS Server
 
-![](media/image9.png)
-
 Configuring DNS Server
 
-![](media/image10.png)
+![](media/image9.png)
 
 Configuring DNS server and creating forward lookup zone.
 
-## Joining Domain on Workstation PC
+![](media/image10.png)
 
-![](media/image11.png)
+
+## Joining Domain on Workstation PC
 
 Joining the CYBERFORGE domain
 
+![](media/image11.png)
+
+It will ask to log on with an administrator account then appear with the message "Welcome to the CYBERFORGE.com domain. The workstation will then require a restart.
+
 ![](media/image12.png)
 
-Will ask to log on with an administrator account, after will say "Welcome to the CYBERFORGE.com domain. The workstation will then require a restart.
+After logging into the workstation using one of the AD user accounts, we can check and see we are in the domain.
 
 ![](media/image13.png)
 
-After logging into the workstation using one of the AD user accounts, we can check and see we are in the domain.
