@@ -2,7 +2,7 @@
 
 ## Adding Roles and Features
 
-Here I clicked on the tools menu the clicked on 'Add Roles and Features'.
+Click on the tools menu then on 'Add Roles and Features'.
 
 ![](media/image1.png)
 
