@@ -22,3 +22,12 @@ Scenario 2 entailed the red teaming in the Cyberforge CTF
   6. RockYou Wordlist
 
 ## WiFi Cracking
+
+## Reconnaissance
+After gaining access to the Vmbr1 we perform the following reconnaissance
+```bash
+sudo nmap -sS -O -p- 192.168.0.0/24
+```
+This was to scan the network for hosts and to see any open ports and the operating systems.
+
+<img width="891" height="1245" alt="Screenshot From 2026-09-15 17-31-01" src="https://github.com/user-attachments/assets/eab2ca18-5a5b-4254-a6d2-d49521f7c446" />
