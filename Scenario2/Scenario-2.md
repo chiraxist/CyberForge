@@ -1,6 +1,6 @@
-#Scenario 2
+# Scenario 2
 
-##Scenario 2 contains the following methodology:
+## Scenario 2 contains the following methodology:
   1.	Hacker finds WiFi Network “FT_Smart_Factort”
   2.	Hacker uses WIFITE to crack password
   3.	Hacker authenticates onto the Vmbr1 network
@@ -12,7 +12,7 @@
   9.	Hacker accesses OT
   10.	 Hacker completes CTF
 
-##Tools and Resources used:
+## Tools and Resources used:
   1. AirCrack
   2. Nmap
   3. Metasploit Framework
@@ -20,4 +20,4 @@
   5. Hashcat
   6. RockYou Wordlist
 
-##WiFi Cracking
+## WiFi Cracking
