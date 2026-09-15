@@ -31,3 +31,9 @@ sudo nmap -sS -O -p- 192.168.0.0/24
 This was to scan the network for hosts and to see any open ports and the operating systems.
 
 <img width="891" height="1245" alt="Screenshot From 2026-09-15 17-31-01" src="https://github.com/user-attachments/assets/eab2ca18-5a5b-4254-a6d2-d49521f7c446" />
+
+<img width="1969" height="1119" alt="2" src="https://github.com/user-attachments/assets/bbaa052b-6ea9-4d40-9741-478c73b6ad29" />
+
+<img width="1969" height="1119" alt="3" src="https://github.com/user-attachments/assets/b12be7f0-f27a-43f5-8e7b-541dbaabd4c8" />
+
+We discover a Windows Server 2012 machine on the IP 192.168.0.200.
