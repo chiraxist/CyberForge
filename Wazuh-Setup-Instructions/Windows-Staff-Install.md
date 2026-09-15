@@ -9,13 +9,13 @@
 
 3. Click enter and you should see a progress bar of some sort.
 
-4. Next, input this following command, replacing the <Wazuh-Manager-IP> with your Wazuh manager IP address, and replace <Wazuh-Agent-Name> with your desired name, making sure it is all 1 word: 
+4. Next, input this following command, replacing the (Wazuh-Manager-IP) with your Wazuh manager IP address, and replace (Wazuh-Agent-Name) with your desired name, making sure it is all 1 word: 
     
     ```msiexec.exe /i $env:tmp\wazuh-agent.msi /q WAZUH_MANAGER='<Wazuh-Manager-IP>' WAZUH_AGENT_NAME='<Wazuh-Agent-Name>'```
 
 <img width="1192" height="98" alt="image" src="https://github.com/user-attachments/assets/fe8f8156-550b-4662-a57f-0b0a36c3cbd7" />
 
-5. Finally, you must start the service:
+5. Finally, start the Wazuh agent service:
   
     ```NET Start Wazuh```
 
