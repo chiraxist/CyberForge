@@ -1,4 +1,5 @@
-Scenario 2
+##Scenario 2
+
 Scenario 2 contains the following methodology:
   1)	Hacker finds WiFi Network “FT_Smart_Factort”
   2)	Hacker uses WIFITE to crack password
@@ -10,3 +11,5 @@ Scenario 2 contains the following methodology:
   8)	Hacker authenticates into jumphost
   9)	Hacker accesses OT
   10)	 Hacker completes CTF
+
+Tools used
