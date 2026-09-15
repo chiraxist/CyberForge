@@ -1,4 +1,5 @@
 # Scenario 2
+Scenario 2 entailed the red teaming in the Cyberforge CTF
 
 ## Scenario 2 contains the following methodology:
   1.	Hacker finds WiFi Network “FT_Smart_Factort”
