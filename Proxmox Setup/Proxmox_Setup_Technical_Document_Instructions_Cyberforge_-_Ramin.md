@@ -1,40 +1,33 @@
 # Cyberforge 4.0 - Proxmox Virtual Environment Setup Instructions
 ``01/09/2026``
 
+## Part 1: Proxmox Download
+We will need to download an ISO file of Proxmox to flash to a USB for installation. Navigate to ```https://www.proxmox.com/en/downloads/proxmox-virtual-environment``` & download ```Proxmox VE 9.2 ISO Installer``` or later.
 
-1.  Navigate to: <https://www.proxmox.com/en/downloads/proxmox-virtual-environment>
+### 1.0 Flashing the ISO file to a USB
+#### Linux
 
-2.  Download "Proxmox VE 9.2 ISO Installer" or later
+Go to the file location of the download and open a terminal in that folder by right clicking -\> open terminal here. Within terminal, enter:
 
-3.  Flash the ISO to a USB for installation:
-
-    a.  **Linux**:
-
-        i.  Go to the file location of the download and open a terminal in that folder by right clicking -\> open terminal here
-
-        ii. Within terminal, enter:
-
-```sudo dd if=/path/to/proxmox-ve.iso of =/dev/sdX bs=4M status=progress```
-> **AND** **replace:**
+```bash
+sudo dd if=/path/to/proxmox-ve.iso of =/dev/sdX bs=4M status=progress
+```
+**and** **replace:**
 ```path/to/proxmox-ve.iso```
-> with your path and file name
-> **AND** **replace:**
+with your path and file name
+**and** **replace:**
 ```/dev/sdX/```
-> with your USB Drive identifier name. (Example below)
+with your USB Drive identifier name. (Example below)
 
 ![](media/083691d30cca6251c8fffdcc43308472bf3bf6c2.png)
 
-b.  **Windows**:
+#### Windows
+##### Installing Rufus
+We are going to be using a program called ```rufus``` to flash the ISO image onto our USB. Navigate to: ```https://rufus.ie/en/#download``` and download ```rufus-4.15.exe``` or newer and install.
 
-    i.  Navigate to: <https://rufus.ie/en/#download>
+##### Flashing the Proxmox ISO using Rufus
 
-    ii. Download "rufus-4.15.exe" or newer and install
-
-    iii. Open rufus, and under "Device", select your USB device as the target device
-
-    iv. Under "Boot Selection", select your ISO file to flash
-
-    v.  Click Start
+Open rufus, and under ```Device```, select your USB device as the target device. Under ```Boot Selection```, select your ISO file to flash and click ```start```.
 
 ![](media/f8dcd0f77d7123446c926ac267ec51bdd31aafbe.png)
 
@@ -42,19 +35,19 @@ b.  **Windows**:
 
 5.  Plug your USB with the flashed ISO into your target device you would like Proxmox VE to be installed in
 
-6.  Enter the boot menu of the target device through the BIOS, and select your USB as the boot device
+6.  Enter the boot menu of the target device through the BIOS, and select your USB as the ```boot device```
 
 ![](media/e8a67f4aba60d51b266fbfe1da02d9b59a384b54.png "screenshot/pve-grub-menu.png")
 
-7.  Once booted in, click on "Install Proxmox VE (Graphical)"
+7.  Once booted in, click on ```Install Proxmox VE (Graphical)```
 
-8.  At the bottom of the screen make sure the "Target Hard disk" is the device's main storage location
+8.  At the bottom of the screen make sure the ```Target Hard disk``` is the device's main storage location
 
 ![](media/95a1d6512fef6b7ae328bf95996ed442b41d00d7.png "https://pve.proxmox.com/pve-docs/images/screenshot/pve-select-target-disk.png")
 
 9.  Click Next
 
-10. Set your "Country, Time zone and Keyboard layout" to your preferences
+10. Set your ```Country, Time zone and Keyboard layout``` to your preferences
 
 ![](media/cb6aa14fd6fcfa4d8d22b3319bc2087544cf6c71.png "https://pve.proxmox.com/pve-docs/images/screenshot/pve-select-location.png")
 
@@ -68,15 +61,15 @@ b.  **Windows**:
 
 ![](media/589e85240cfda3d33a59e515b19e253a1511a1fa.png "https://pve.proxmox.com/pve-docs/images/screenshot/pve-setup-network.png")
 
-14. If familiar with IP address subnets of your home network, configure your "IP Address, Gateway and DNS Server" accordingly, otherwise leave these options by default
+14. If familiar with IP address subnets of your home network, configure your ```IP Address, Gateway and DNS Server``` accordingly, otherwise leave these options by default
 
-15. For management interface, if there are multiple options, click on the first network interface not starting with "WL\....", as that is the wireless interface
+15. For management interface, if there are multiple options, click on the first network interface not starting with ```WL\....```, as that is the wireless interface
 
 16. Click Next
 
 ![](media/dd0ae276fef490276c1ab3e2a017dd5f12d2f415.png "https://pve.proxmox.com/pve-docs/images/screenshot/pve-install-summary.png")
 
-17. Make sure the information is correct and check the "Automatically reboot after successful installation" box and click Install
+17. Make sure the information is correct and check the ```Automatically reboot after successful installation``` box and click Install
 
 ![](media/3b1e0f734d9013ad2e8c04c348e6a090ec2deb12.png "https://pve.proxmox.com/pve-docs/images/screenshot/pve-installation.png")
 
