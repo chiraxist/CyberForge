@@ -1,6 +1,6 @@
-##Scenario 2
+#Scenario 2
 
-Scenario 2 contains the following methodology:
+##Scenario 2 contains the following methodology:
   1)	Hacker finds WiFi Network “FT_Smart_Factort”
   2)	Hacker uses WIFITE to crack password
   3)	Hacker authenticates onto the Vmbr1 network
