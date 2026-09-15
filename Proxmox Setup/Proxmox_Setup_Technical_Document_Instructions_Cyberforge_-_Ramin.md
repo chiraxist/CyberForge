@@ -1,8 +1,6 @@
-01/09/2026
+# Cyberforge 4.0 - Proxmox Virtual Environment Setup Instructions
+``01/09/2026``
 
-Cyberforge 4.0
-
-# Instructions
 
 1.  Navigate to: <https://www.proxmox.com/en/downloads/proxmox-virtual-environment>
 
@@ -16,18 +14,12 @@ Cyberforge 4.0
 
         ii. Within terminal, enter:
 
-> "sudo dd if=/path/to/proxmox-ve.iso of =/dev/sdX bs=4M status=progress"
->
+```sudo dd if=/path/to/proxmox-ve.iso of =/dev/sdX bs=4M status=progress```
 > **AND** **replace:**
->
-> "path/to/proxmox-ve.iso"
->
+```path/to/proxmox-ve.iso```
 > with your path and file name
->
 > **AND** **replace:**
->
-> "/dev/sdX/"
->
+```/dev/sdX/```
 > with your USB Drive identifier name. (Example below)
 
 ![](media/083691d30cca6251c8fffdcc43308472bf3bf6c2.png)
@@ -94,9 +86,9 @@ b.  **Windows**:
 
 ![](media/2ce49ecaef21e8d2db1219fcf79bb1979d8df25c.png "Install Proxmox VE [A Step By Step Guide] - OSTechNix")
 
-20. For "pve login" / "proxmox login", enter "root"
+20. For "pve login" / "proxmox login", enter ```root```
 
-21. For "password", enter your configured password
+21. For "password", enter ```your configured password```
 
 22. With a separate device, that is connected via ethernet to the Proxmox machine, statically apply the laptop an IP address in the same range as the Proxmox machine:
 
@@ -114,26 +106,26 @@ b.  **Windows**:
 
 1.  IP Address:
 
-    a.  Enter "192.168.0.XX" (replace XX with any number)
+    a.  Enter ```192.168.0.XX``` (replace XX with any number)
 
 2.  Subnet Mask:
 
-    a.  Enter "255.255.255.0"
+    a.  Enter ```255.255.255.0```
 
 3.  Default Gateway:
 
-    a.  Enter "192.168.0.1"
+    a.  Enter ```192.168.0.1```
 
 ```{=html}
 <!-- -->
 ```
-23. Navigate to Proxmox's web browser IP and port shown on the login page via a web browser. E.g: "192.168.0.100:8006"
+23. Navigate to Proxmox's web browser IP and port shown on the login page via a web browser. E.g: ```192.168.0.100:8006```
 
 > ![](media/1efb881b2b21b9a92da19da9461add93a898027d.png "screenshot/gui-login-window.png")
 
-24. Enter "root" as username
+24. Enter ```root``` as username
 
-25. Enter chosen password as password
+25. Enter ```your chosen password``` as password
 
 26. Click "Okay" once the valid subscription dialogue box pops up
 
