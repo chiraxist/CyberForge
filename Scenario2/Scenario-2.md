@@ -82,6 +82,41 @@ This command then did one final check to confirm the machine was vulnerable to t
 
 <img width="1259" height="907" alt="5" src="https://github.com/user-attachments/assets/501eca7a-359a-4bbb-8ad0-fa811301f464" />
 
+Once in the Windows Server 2012 CLI, we did the following command to confirm we were in:
+
+```cmd
+sysinfo
+```
+Once confirmed we were in the Windows Server 2012 machine we used the following command to dump all of the password hashes:
+
+```cmd
+creds_all
+```
+
+Which then gave us the hashes all all the passwords local and on the Active Directory, in particular the Administrator credential hash.
+
+<img width="2558" height="1297" alt="6" src="https://github.com/user-attachments/assets/399322a9-c56d-4b97-8976-6a88e945a7a9" />
+
+We then copied the hash and printed it to an admin.hash file in a separate terminal window:
+
+```bash
+printf '%s\n' 'e19ccf75ee54e06b06a5907af13cef42' > admin.hash
+```
+
+Then confirming everything was printed in the file correctly:
+
+```bash
+cat -A admin.hash
+wc -c admin.hash
+```
+
+<img width="1018" height="291" alt="7" src="https://github.com/user-attachments/assets/a9a8e82b-bbf6-4d10-a92e-3976d88be0e1" />
+
+## Cracking the Hashed Administrator Password
+
+
+
+
 
 
 
