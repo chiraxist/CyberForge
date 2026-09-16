@@ -114,6 +114,26 @@ wc -c admin.hash
 
 ## Cracking the Hashed Administrator Password
 
+So before cracking the hashed password, we had to extract the rockyou wordlist:
+```bash
+ls /usr/share/wordlists/
+sudo gzip -dk /usr/share/wordlists/rockyou.txt.gz
+```
+
+<img width="1837" height="469" alt="8" src="https://github.com/user-attachments/assets/bfa9336b-2c3e-4269-bcce-6b5eabaf33dc" />
+
+To which we could no crack the hashed password using the wordlist:
+```bash
+hashcat -m 1000 admin.hash /usr/share/wordlists/rockyou.txt -d 1
+```
+
+Once complete we can see the plaintext Administrator password as 'P@ssw0rd'
+
+<img width="1751" height="1003" alt="9" src="https://github.com/user-attachments/assets/a426762d-14a1-4cb0-8bc2-4f857ccd93fc" />
+
+<img width="1751" height="1003" alt="10" src="https://github.com/user-attachments/assets/fdae2d5c-692f-4b21-a16f-f5d3a5f1d077" />
+
+
 
 
 
