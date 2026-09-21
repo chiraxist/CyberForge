@@ -23,7 +23,7 @@ Click enter and you should see a progress bar.
 
 ## 2.0 Configure the Agent
 
-### 2.1 Start the service enable the agent
+### 2.1 Start the service and enable the agent
 Input the following commands, enabling and starting the wazuh agent service: 
     
 ```bash
