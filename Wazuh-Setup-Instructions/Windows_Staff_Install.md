@@ -1,5 +1,7 @@
 # For Windows Staff Machines
 
+## 1.0 Download and Installation
+
 1. Go into a PowerShell terminal with Administrator privileges
 2. Paste  & configure these following commands in sequential order:
 
@@ -19,7 +21,9 @@
 
 <img width="1192" height="98" alt="image" src="https://github.com/user-attachments/assets/fe8f8156-550b-4662-a57f-0b0a36c3cbd7" />
 
-5. Finally, start the Wazuh agent service:
+## 2.0 Enabling and Starting the Agent
+
+1. Start the Wazuh agent service:
   
     ```powershell
    NET Start Wazuh
@@ -27,4 +31,4 @@
 
 <img width="1166" height="150" alt="image" src="https://github.com/user-attachments/assets/ac5385da-f22a-4171-9743-aa13879d1e28" />
 
-6. Once that is done, navigate back to your "endpoints summary page" in the Wazuh dashboard, and allow it some time to connect.
+2. Once that is done, navigate back to your "endpoints summary page" in the Wazuh dashboard, and allow it some time to connect.
