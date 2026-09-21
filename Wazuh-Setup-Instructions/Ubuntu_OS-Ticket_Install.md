@@ -5,11 +5,11 @@ The goal is to install the specific Wazuh agent tailored to the operating system
 
 ## 1.0 Download and Installation
 
-### 1.1 Bash Shell
+### 1.1 Open a Bash Shell
 
-Open a Bash Shell anywhere on your Ubuntu machine.
+Open a Bash Shell anywhere on your Ubuntu machine by clicking on the terminal icon or searching for terminal.
 
-### 1.2 Wazuh Agent Download
+### 1.2 Download the Wazuh Agent through CLI
 Paste & configure the following commands in sequential order, replacing the ```<Wazuh-Manager-IP>``` with your Wazuh manager IP address, and replace ```<Wazuh-Agent-Name>``` with your desired name, making sure it is all 1 word:
 
 ```bash
@@ -21,10 +21,10 @@ wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14
 
 Click enter and you should see a progress bar.
 
-## 2.0 Configuring the Agent
+## 2.0 Configure the Agent
 
-### 2.1 Starting the service, then enabling the agent
-Next, input the following commands, enabling and starting the wazuh agent service: 
+### 2.1 Start the service enable the agent
+Input the following commands, enabling and starting the wazuh agent service: 
     
 ```bash
 sudo systemctl daemon-reload && sudo systemctl enable wazuh-agent && sudo systemctl start wazuh-agent
