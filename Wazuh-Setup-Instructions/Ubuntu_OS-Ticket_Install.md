@@ -1,6 +1,6 @@
 # For Ubuntu Machines
 
-1. Go into the terminal
+1. Go into a Bash Shell.
 2. Paste & configure the following commands in sequential order, replacing the ```<Wazuh-Manager-IP>``` with your Wazuh manager IP address, and replace ```<Wazuh-Agent-Name>``` with your desired name, making sure it is all 1 word:
 
    ```bash
