@@ -2,7 +2,7 @@
 Scenario 2 entailed the red teaming in the Cyberforge CTF
 
 ## Scenario 2 contains the following methodology:
-  1.	Hacker finds WiFi Network “FT_Smart_Factort”
+  1.	Hacker finds WiFi Network “FT_Smart_Factory”
   2.	Hacker uses WIFITE to crack password
   3.	Hacker authenticates onto the Vmbr1 network
   4.	Hacker does recon and discovers devices on network
@@ -166,7 +166,52 @@ whoami
 
 <img width="463" height="380" alt="image" src="https://github.com/user-attachments/assets/a402df97-3377-4b1e-9f3f-c1c2729095a7" />
 
+In the home directory we find a plaintext file call ikeepforgettingmypasswd:
+```bash
+ls -la
+cat ikeepforgettingmypasswd
+```
+
+Which contains some credentials JumpHost:JumpH0st2026!
+
 ## Connecting to the JumpHost using RDP
+
+We then performed an nmap scan on the 192.168.100.0/24 network to scan for any machines.
+
+```bash
+nmap 192.168.100.0/24
+```
+
+Doing this we found an IP address 192.168.100.3 which has port 3389 open which we can also access using RDP.
+
+<img width="847" height="696" alt="image" src="https://github.com/user-attachments/assets/d5ca37b1-c8b8-40e7-9e8f-2a2b2de2717a" />
+
+Using the program xfreerdp we can then access this machine using the credentials we found:
+
+```bash
+xfreerdp /v:192.168.100.3 /u:jumphost /cert:ignore
+```
+
+<img width="940" height="773" alt="image" src="https://github.com/user-attachments/assets/034af935-5739-463e-b766-5cd8fc8ddf6e" />
+
+
+We then use the credentials that we found in the plaintext file
+
+<img width="780" height="641" alt="image" src="https://github.com/user-attachments/assets/666ef31d-12b1-4cea-aa93-01a9e6a4bd5b" />
+
+After typing in the credentials again on the machines log in screen, we then have access to the system
+
+<img width="940" height="773" alt="image" src="https://github.com/user-attachments/assets/e977f241-bbfc-404b-8b3a-b92b0333dca6" />
+
+We can then prove where see where we are and view that we are now in the 192.168.200.0/24 network:
+
+```bash
+whoami
+ip add
+```
+
+<img width="940" height="773" alt="image" src="https://github.com/user-attachments/assets/1dec9fb0-a64c-4985-b960-4bdfa77aa7f0" />
+
 
 
 
