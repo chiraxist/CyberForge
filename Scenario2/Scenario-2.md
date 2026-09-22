@@ -23,6 +23,15 @@ Scenario 2 entailed the red teaming in the Cyberforge CTF
 
 ## WiFi Cracking
 
+```bash
+sudo airmon-ng check kill
+sudo airmon-ng start wlan1
+sudo wifite -i wlan1
+```
+
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/55352af2-e608-4fbf-a564-55e90607fd4d" />
+
+
 ## Reconnaissance
 After gaining access to the Vmbr1 we perform the following reconnaissance
 ```bash
