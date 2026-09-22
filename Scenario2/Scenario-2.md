@@ -78,7 +78,11 @@ So the following options were:
 ```msfconsole
 check
 ```
-This command then did one final check to confirm the machine was vulnerable to this exploit.
+This command then did one final check to confirm the machine was vulnerable to this exploit. Before then running the exploit with the command:
+
+```msfconsole
+run
+```
 
 <img width="1259" height="907" alt="5" src="https://github.com/user-attachments/assets/501eca7a-359a-4bbb-8ad0-fa811301f464" />
 
@@ -132,6 +136,37 @@ Once complete we can see the plaintext Administrator password as 'P@ssw0rd'
 <img width="1751" height="1003" alt="9" src="https://github.com/user-attachments/assets/a426762d-14a1-4cb0-8bc2-4f857ccd93fc" />
 
 <img width="1751" height="1003" alt="10" src="https://github.com/user-attachments/assets/fdae2d5c-692f-4b21-a16f-f5d3a5f1d077" />
+
+## Connecting to Admin Computer with RDP
+
+On KALI Linux we RDP into the Admin Computer:
+
+```bash
+sudo su
+rdesktop -u administrator@CYBERFORGE.com 192.168.0.102
+```
+
+<img width="940" height="113" alt="image" src="https://github.com/user-attachments/assets/7ea2aaa7-a1b8-4d25-9c2e-8679e0ae0860" />
+
+We then used the credentials that we got from the active directory to login
+
+<img width="574" height="472" alt="image" src="https://github.com/user-attachments/assets/6f47ec72-06de-4333-9248-5fe8950a0072" />
+
+<img width="363" height="298" alt="image" src="https://github.com/user-attachments/assets/03734f6d-7b4a-450a-a2f8-fdbf66bc1137" />
+
+<img width="487" height="400" alt="image" src="https://github.com/user-attachments/assets/e3859773-7262-4672-b135-bdb8495e63f9" />
+
+Credentials being Administrator:P@ssw0rd
+
+Using WhoAmI to prove we on the admincomputer:
+
+```bash
+whoami
+```
+
+<img width="463" height="380" alt="image" src="https://github.com/user-attachments/assets/a402df97-3377-4b1e-9f3f-c1c2729095a7" />
+
+## Connecting to the JumpHost using RDP
 
 
 
