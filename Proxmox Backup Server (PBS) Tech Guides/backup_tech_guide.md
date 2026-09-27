@@ -14,8 +14,7 @@ In PVE shell, execute the command:
 
 /root/pbs-host-backup.sh
 
-![](images/image1.png){width="5.790123578302712in"
-height="1.4444444444444444in"}
+![](images/image1.png)
 
 **PBS VM**
 
@@ -42,8 +41,7 @@ height="1.4444444444444444in"}
 
     g.  **Network**: default bridge
 
-![](images/image2.png){width="6.268055555555556in"
-height="2.8041666666666667in"}
+![](images/image2.png)
 
 4.  Review and click Finish but do not start.
 
@@ -100,8 +98,7 @@ height="2.8041666666666667in"}
     a list of VMs that have been successfully backed up with dropdowns
     shown in the image below.
 
-![](images/image4.png){width="6.268055555555556in"
-height="2.720833333333333in"}
+![](images/image4.png)
 
 **Configuration Backups**
 
@@ -117,8 +114,7 @@ height="2.720833333333333in"}
 
     d.  **Save**
 
-![](images/image5.png){width="5.6in"
-height="3.9882349081364827in"}
+![](images/image5.png)
 
 2.  In PBS console, confirm user added with command:
 
@@ -134,8 +130,7 @@ proxmox-backup-manager user list
 
     d.  **Propagate:** Yes
 
-![](images/image6.png){width="5.740972222222222in"
-height="3.682353455818023in"}
+![](images/image6.png)
 
 4.  Manually test the backup in PVE Shell with command:
 
@@ -211,8 +206,7 @@ crontab -e
 
 crontab -l
 
-![](images/image7.png){width="6.268055555555556in"
-height="4.68125in"}
+![](images/image7.png)
 
 11. Verify with the command:
 
