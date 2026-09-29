@@ -1,0 +1,118 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="CyberForge Network Architecture" id="cyberforge-net">
+    <mxGraphModel dx="1076" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="host" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;fontSize=14;fontStyle=1;" value="Proxmox Host&#xa;(physical server, single node)" vertex="1">
+          <mxGeometry height="640" width="960" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pfsense" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=13;fontStyle=1;" value="pfSense VM&lt;br&gt;Routing &amp;amp; Firewall (Consideration for external pfSense)" vertex="1">
+          <mxGeometry height="60" width="150" x="450" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vmbr1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;fontSize=13;fontStyle=1;" value="vmbr1 - Enterprise IT&lt;br&gt;(internet-facing)&amp;nbsp;&lt;div&gt;IP Range 192.168.0.100 - 192.168.0.199&amp;nbsp;&lt;div&gt;Default Gateway: 192.168.0.1&lt;/div&gt;&lt;div&gt;DNS Server: 192.168.100.1&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="335" width="260" x="80" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="staff1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6C8EBF;fontSize=12;" value="Staff1 (VM 101)" vertex="1">
+          <mxGeometry height="35" width="220" x="100" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="staff2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6C8EBF;fontSize=12;" value="Staff2 (VM 102)" vertex="1">
+          <mxGeometry height="35" width="220" x="100" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="vmbr2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;fontSize=13;fontStyle=1;" value="vmbr2 - Admin / Jump&#xa;(internal only)" vertex="1">
+          <mxGeometry height="300" width="260" x="400" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6C8EBF;fontSize=12;" value="AD (VM 100)" vertex="1">
+          <mxGeometry height="35" width="220" x="100" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="vmbr3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=light-dark(#D79B00,#795200);verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;fontSize=13;fontStyle=1;" value="vmbr3 - OT&#xa;(target zone)" vertex="1">
+          <mxGeometry height="300" width="260" x="700" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ad" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#9673A6;strokeWidth=2;gradientColor=#E1D5E7;fontSize=12;fontStyle=1;" value="Admin (VM 105)&lt;br&gt;dual-homed: vmbr1 + vmbr2" vertex="1">
+          <mxGeometry height="45" width="180" x="300" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="jumphost" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#D79B00,#795200);strokeColor=#9673A6;strokeWidth=2;gradientColor=#E1D5E7;fontSize=12;fontStyle=1;" value="Jumphost (VM 106)&#xa;dual-homed: vmbr1 + vmbr2" vertex="1">
+          <mxGeometry height="45" width="180" x="590" y="377.5" as="geometry" />
+        </mxCell>
+        <mxCell id="pbs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=13;fontStyle=1;" value="PBS (VM 108)&#xa;Backup Datastore" vertex="1">
+          <mxGeometry height="60" width="260" x="400" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="pfsense" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#666666;endArrow=block;" target="vmbr1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="pfsense" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#666666;endArrow=block;" target="vmbr2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="pfsense" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#666666;endArrow=block;" target="vmbr3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="ad" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6C8EBF;dashed=1;endArrow=none;" target="vmbr1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="ad" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#9673A6;dashed=1;endArrow=none;" target="vmbr2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="jumphost" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#9673A6;dashed=1;endArrow=none;" target="vmbr2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="vmbr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82B366;dashed=1;endArrow=block;" target="pbs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" value="Legend&#xa;Solid arrow = pfSense routing&#xa;Dashed blue/purple = dual-homed NIC&#xa;Dashed green = backup flow" vertex="1">
+          <mxGeometry height="80" width="260" x="90" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=light-dark(#D79B00,#795200);fontSize=12;" value="Factory devices" vertex="1">
+          <mxGeometry height="35" width="220" x="720" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-8" edge="1" parent="1" source="vmbr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82B366;dashed=1;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="pbs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="210" y="520" as="sourcePoint" />
+            <mxPoint x="210" y="555" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-10" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=light-dark(#D79B00,#795200);dashed=1;endArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=light-dark(#D79B00,#795200);">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="526.53" />
+              <mxPoint x="770" y="526.53" />
+              <mxPoint x="770" y="370" />
+            </Array>
+            <mxPoint x="830" y="516.53" as="sourcePoint" />
+            <mxPoint x="680" y="370.03" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-13" edge="1" parent="1" source="jumphost" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82B366;dashed=1;endArrow=block;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="pbs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="470" as="sourcePoint" />
+            <mxPoint x="680" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#9673A6;strokeWidth=2;gradientColor=#E1D5E7;fontSize=12;fontStyle=1;" value="osticket (VM 103) - ticketing&lt;div&gt;dual-homed: vmbr1 + vmbr2&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="180" x="290" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#9673A6;strokeWidth=2;gradientColor=#E1D5E7;fontSize=12;fontStyle=1;" value="Mailcow (VM 104) - mail&lt;div&gt;dual-homed: vmbr1 + vmbr2&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="180" x="290" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-17" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#6C8EBF;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="570" />
+            </Array>
+            <mxPoint x="210" y="570" as="sourcePoint" />
+            <mxPoint x="370" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w_tIBk8t1VyPhYhnx4CM-19" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=light-dark(#000000,#A680B8);" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="540" />
+            </Array>
+            <mxPoint x="530" y="540" as="sourcePoint" />
+            <mxPoint x="380" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
