@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="HQhGrkPL_5oZf08qdS1_">
+    <mxGraphModel dx="2138" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Red Team/External Network" vertex="1">
+          <mxGeometry height="60" width="171" x="-501" y="282" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Blue Team Network" vertex="1">
+          <mxGeometry height="60" width="171" x="-27" y="282" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;b&gt;Public Enterprise DMZ - IP Address&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="645" x="-501" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFCC;strokeColor=light-dark(#89b86f, #ededed);" value="Web Server" vertex="1">
+          <mxGeometry height="49" width="135" x="-144" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFCC;strokeColor=#82b366;" value="Mail Gateway" vertex="1">
+          <mxGeometry height="49" width="135" x="-348" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;Enterprise Systems - Virtual Networks / vmbrs&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="645" x="-495" y="533" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FF;strokeColor=#6c8ebf;" value="&lt;b&gt;IT Systems - vmbr1 - 192.168.0.???/24&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Staff 1&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Staff 2&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Mailcow&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;OSTicket&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="608" x="-478" y="589" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FF;strokeColor=#6c8ebf;" value="&lt;b&gt;Admin Network - vmbr2 - 192.168.0.???/24&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Admin&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Mailcow&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;OSTicket&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Jumphost Access&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="608" x="-477.5" y="661" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="OT Boundary Firewall" vertex="1">
+          <mxGeometry height="49" width="171" x="-259.5" y="759" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=light-dark(#d1fae6, #1f2f1e);strokeColor=#82b366;" value="ICS/OT DMZ - 192.168.172.0/24&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="535" x="-441" y="834" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#ecfef6, #0c2100);" value="Jump Host" vertex="1">
+          <mxGeometry height="42" width="101" x="-224.5" y="876" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-12" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="465" width="726" x="-535.5" y="976" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-13" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=light-dark(#d1fae6, #1f2f1e);strokeColor=#82b366;" value="&lt;div&gt;Smart Factory ICS / OT Network - 192.168.174.0/24&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Representative Fischertechnik industry 4.0 production system and control stack&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="465" width="726" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-14" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#f8fee7, #ededed);strokeColor=light-dark(#9ed845, #ededed);" value="&lt;b&gt;Control and Integration Layer&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="680" x="17" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-15" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;b&gt;S7-1500 PLC&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;div&gt;S7comm 102&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="31" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-16" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;b&gt;HMI / Operator&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Control&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="141" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-17" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;div&gt;&lt;b&gt;TXT 4.0&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Edge Control&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="253" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-18" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;b&gt;Raspberry Pi&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Node-RED&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="365" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-19" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;div&gt;&lt;b&gt;OPC / UA&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4840&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="475" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-20" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;div&gt;&lt;b&gt;MQTT / MQTTS&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1883 / 8883&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="585" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-21" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#f8fee7, #ededed);strokeColor=light-dark(#9ed845, #ededed);" value="&lt;div&gt;&lt;b&gt;Physical Smart Factory Stations&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="680" x="15" y="207" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-22" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;div&gt;&lt;b&gt;HBW&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;High-bay warehouse&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="29" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-23" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;b&gt;MPO&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Multi-processing&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="139" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-24" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;div&gt;&lt;b&gt;VGR&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Vacuum Gripper Robot&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="251" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-25" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;b&gt;SLD&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Sorting Line&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="363" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-26" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;div&gt;&lt;b&gt;SSC&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Storage / sorting&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="473" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-27" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#a8dc5c, #ededed);" value="&lt;div&gt;&lt;b&gt;DPS / NFC&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Delivery / ID&lt;/div&gt;" vertex="1">
+          <mxGeometry height="49" width="104" x="583" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="MYJvm2t3KLnBerlw9UaV-28" parent="MYJvm2t3KLnBerlw9UaV-12" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#f8fee7, #ededed);strokeColor=light-dark(#9ed845, #ededed);" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Device Layer: sensors, actuators, motors, conveyors, position switches, NFC readers and safety interlocks&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Physical effects remain constrained by lab safety procedures and exercise reset controls&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="98" width="680" x="15" y="335" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
