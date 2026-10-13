@@ -11,7 +11,7 @@ All of the OT devices connected to a swith, in that same switch an ethernet cabl
 <img width="3024" height="4032" alt="IMG_6466" src="https://github.com/user-attachments/assets/727e0979-95f8-443d-b16c-1564e3894b9f" />
 <img width="3024" height="4032" alt="IMG_6467" src="https://github.com/user-attachments/assets/fe11bb10-1072-4489-b859-7c388955f01f" />
 ## Adding the Physical Ethernet Cable to the Linux Bridge
-In Systenm->Networks go to Vmbr3 and click edit.
+In System->Networks go to Vmbr3 and click edit.
 Then select Vmbr3 then click edit, and under 'Bridge ports' add nic0.
 <img width="1042" height="541" alt="image" src="https://github.com/user-attachments/assets/48e36c07-c6fe-4db3-9a96-579db40a4a89" />
 
