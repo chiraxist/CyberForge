@@ -176,6 +176,10 @@ whoami
 <img width="463" height="380" alt="image" src="https://github.com/user-attachments/assets/a402df97-3377-4b1e-9f3f-c1c2729095a7" />
 
 In the home directory we find a plaintext file call ikeepforgettingmypasswd:
+We also find flag 2
+<img width="1023" height="841" alt="Screenshot From 2026-10-16 16-18-04" src="https://github.com/user-attachments/assets/eb4f1e8d-7e2d-4e58-8990-784a8d8db5aa" />
+
+
 ```bash
 ls -la
 cat ikeepforgettingmypasswd
