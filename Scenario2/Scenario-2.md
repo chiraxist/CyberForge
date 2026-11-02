@@ -14,7 +14,7 @@ Scenario 2 entailed the red teaming in the Cyberforge CTF
   10.	 Hacker completes CTF
 
 ## Tools and Resources used:
-  1. AirCrack
+  1. Wifite
   2. Nmap
   3. Metasploit Framework
   4. Meterpreter
