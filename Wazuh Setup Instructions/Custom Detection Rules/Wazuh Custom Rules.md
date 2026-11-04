@@ -493,8 +493,6 @@ sudo nano /var/ossec/etc/rules/local_rules.xml
 sudo /var/ossec/bin/wazuh-logtest
 ```
 
-> 📸 **Screenshot:** `wazuh-logtest` output showing a pivot event matching its rule ID (e.g. a C2 callback hitting `100210`). Place it here.
-
 ### 6.3 Apply
 ```bash
 sudo systemctl restart wazuh-manager
@@ -502,8 +500,6 @@ sudo systemctl restart wazuh-manager
 
 ### 6.4 Confirm in the dashboard
 Trigger a known event (run a recon command on an agent, or replay a pivot step from [Scenario 1 red-team sheet](../../Scenario1/Senario_1_RedTeam_Code.md)) and confirm the alert appears under the matching rule ID.
-
-> 📸 **Screenshot:** the Wazuh dashboard **Threat Hunting / Events** view filtered on `rule.id` in the `1001xx` range, showing custom alerts firing. Place it here.
 
 ---
 
