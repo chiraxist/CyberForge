@@ -126,7 +126,7 @@ The host firewall writes every logged decision to `/var/log/pve-firewall.log`. T
 | 100101 | 5 | a `DROP`/`REJECT` — `$(srcip)` → `$(dstip):$(dstport)` |
 | 100102 | 10 | 8+ drops from the same source in 60 s (possible scan) |
 
-Full decoder and rule XML: [Wazuh Custom Rules.md](../Wazuh%20Setup%20Instructions/Custom%20Detection%20Rules/Wazuh%20Custom%20Rules.md). For how the `vmbr4` agents reach the manager in the first place, see [Wazuh Agent NAT vmbr4 to vmbr1.md](../Wazuh%20Setup%20Instructions/NAT%20Rules/Wazuh%20Agent%20NAT%20vmbr4%20to%20vmbr1.md).
+Full decoder and rule XML: [Wazuh Custom Rules.md](../Custom%20Detection%20Rules/Wazuh%20Custom%20Rules.md). For how the `vmbr4` agents reach the manager in the first place, see [Wazuh Agent NAT vmbr4 to vmbr1.md](../NAT%20Rules/Wazuh%20Agent%20NAT%20vmbr4%20to%20vmbr1.md).
 
 Because the `wazuh-only` rules use `-log nolog`, normal agent traffic is silent; what reaches `pve-firewall.log` (and therefore Wazuh) is the *blocked* traffic — exactly the anomalies worth alerting on.
 
