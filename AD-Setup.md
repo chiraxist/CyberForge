@@ -30,7 +30,7 @@ The wizard lists preparation tasks, including configuring network settings such 
 
 Click **Next** and proceed through installation type and server selection to the server roles page, targeting `WIN-Q9A07CPFELN`.
 
-**Evidence:** `1. Add Roles and Features.png`.
+<img width="960" height="564" alt="1  Add Roles and Features" src="https://github.com/user-attachments/assets/457a852b-8398-4b1d-b428-27491867c61b" />
 
 ## 2. Select Active Directory Domain Services
 
@@ -47,7 +47,10 @@ The installation progress screen lists:
 
 Wait for role installation to finish before configuring the domain controller. The captured progress screen shows installation underway; the subsequent configuration wizard shows that the process progressed to promotion.
 
-**Evidence:** `2. .png` and `3. Installing Roles.png`.
+
+<img width="960" height="564" alt="2  " src="https://github.com/user-attachments/assets/4767896e-7c50-4940-94df-fa55482d9c70" />
+
+<img width="960" height="564" alt="3  Installing Roles" src="https://github.com/user-attachments/assets/ce512eee-bf23-4d03-9fc7-5395820a07ae" />
 
 ## 3. Configure domain controller promotion
 
@@ -63,7 +66,7 @@ CYBERFORGE.com
 
 Continue through the domain controller options, DNS options, additional options and paths. Enter a Directory Services Restore Mode password when requested. The password and the individual options pages are not captured in this screenshot set.
 
-**Evidence:** `4. Promoting to a Domain Controller.png` shows the earlier selection; `5. Review Options.png` establishes the final deployment configuration.
+<img width="960" height="564" alt="4  Promoting to a Domain Controller" src="https://github.com/user-attachments/assets/dcc62968-0452-46fa-9a28-c6d9e4771e43" />
 
 ## 4. Review the domain configuration
 
@@ -83,7 +86,8 @@ Confirm the settings on **Review Options** before continuing:
 
 Click **Next** to run the prerequisite checks.
 
-**Evidence:** `5. Review Options.png`.
+<img width="960" height="564" alt="5  Review Options" src="https://github.com/user-attachments/assets/81c464eb-d22f-4cac-8e19-690bdd49fc51" />
+
 
 ## 5. Check prerequisites and install
 
@@ -91,7 +95,7 @@ The **Prerequisites Check** page reports that all prerequisite checks passed suc
 
 Review the results, then click **Install**. The wizard states that the server automatically restarts at the end of the operation.
 
-**Evidence:** `6..png`.
+<img width="960" height="564" alt="6" src="https://github.com/user-attachments/assets/b3ab0786-d927-4ae2-8171-30cb1ad71ba0" />
 
 ## 6. Verify the domain controller configuration
 
@@ -112,7 +116,9 @@ Sign in and open **Server Manager → Local Server**. The captured properties sh
 
 These screens establish that the domain configuration was applied and that the AD DS and DNS role pages were available. They do not constitute a complete domain controller health check.
 
-**Evidence:** `7. Domain Exists.png` and `8. Domain Up.png`.
+<img width="960" height="564" alt="7  Domain Exists" src="https://github.com/user-attachments/assets/c2fa19ab-5d68-4b8d-9741-be0e98f90847" />
+<img width="960" height="564" alt="8  Domain Up" src="https://github.com/user-attachments/assets/29addb30-bde2-484a-8551-f2d6c36d4f0e" />
+
 
 ## 7. Open the DNS configuration wizard
 
@@ -120,7 +126,7 @@ From Server Manager, open **Tools → DNS**. In DNS Manager, select the server a
 
 The wizard explains that it can configure lookup zones, root hints and forwarders. Click **Next** to proceed through the required configuration pages.
 
-**Evidence:** `9. Configuring DNS Server.png`.
+<img width="960" height="564" alt="9  Configuring DNS Server" src="https://github.com/user-attachments/assets/029ec8a2-dc77-4ecb-a3dc-bcdc5f4b9600" />
 
 ## 8. Review the DNS wizard summary
 
@@ -134,8 +140,7 @@ The final DNS wizard page records:
 Click **Finish** to save the wizard settings.
 
 The zone name shown here is `cyberforge`, while the Active Directory domain is `CYBERFORGE.com`. Preserve this distinction when describing the evidence: this screenshot does not show the records within the AD domain zone or demonstrate that the additional short-name zone is required for domain membership. The intermediate DNS wizard choices, saved zone contents and lookup tests are not captured.
-
-**Evidence:** `10..png`.
+<img width="960" height="564" alt="10" src="https://github.com/user-attachments/assets/3c1ae3d1-3aa9-4bf0-830e-f1dcc019f223" />
 
 ## 9. Join the Staff1 workstation to the domain
 
@@ -151,7 +156,9 @@ When prompted, provide credentials for an account authorised to join computers t
 
 For this join to work, the workstation must be able to reach the domain controller and resolve the domain through the internal DNS service. The workstation's DNS and IP configuration are not shown in this set.
 
-**Evidence:** `9. Joining Domain on Workstation PC.png` and `11. Joined Domain.png`.
+<img width="960" height="564" alt="9  Joining Domain on Workstation PC" src="https://github.com/user-attachments/assets/5a4f5217-c7cb-479f-926e-fa5301450d0b" />
+<img width="960" height="564" alt="11  Joined Domain" src="https://github.com/user-attachments/assets/1d37c0f1-a6cf-4362-94a2-64c7230b4501" />
+
 
 ## 10. Confirm the join and restart the workstation
 
@@ -170,7 +177,9 @@ Domain: CYBERFORGE.com
 
 A message states that the changes take effect after restarting the computer. Restart Staff1 to complete the process. The restart and a subsequent domain-user login are not captured in the supplied screenshots.
 
-**Evidence:** `11. Joined Domain.png` and `12..png`.
+<img width="960" height="564" alt="11  Joined Domain" src="https://github.com/user-attachments/assets/4f39d67c-c223-4b57-86ef-870cdf0e363d" />
+<img width="960" height="564" alt="12" src="https://github.com/user-attachments/assets/dd9890fc-2469-4b0c-8868-ad9b32ae1a2c" />
+
 
 ## Recorded outcome
 
