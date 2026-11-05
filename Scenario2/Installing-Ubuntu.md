@@ -29,13 +29,14 @@ The screenshots do not show the VM's CPU, memory or disk allocation, or the exac
 
 Access the Admin virtual machine through the Proxmox noVNC console. At the Ubuntu welcome screen, select **English**, then click **Install Ubuntu** to begin installing the operating system on the virtual disk.
 
-**Screenshot 1:** Ubuntu welcome screen with English selected and the Install Ubuntu option available.
+<img width="960" height="564" alt="1" src="https://github.com/user-attachments/assets/e2db5a1b-2b60-4d0f-83a6-c9b02e26a188" />
 
 ## 2. Select the keyboard layout
 
 On the **Keyboard layout** screen, select **English (US)** in both the layout and variant lists. The text field can be used to check that the keys produce the expected characters. Click **Continue**.
 
-**Screenshot 2:** English (US) selected as the keyboard layout and variant.
+<img width="960" height="564" alt="2" src="https://github.com/user-attachments/assets/8a81f88b-44f5-4cf0-bdf1-a82226e60d60" />
+
 
 ## 3. Choose software and update options
 
@@ -43,7 +44,7 @@ On the **Updates and other software** screen, select **Normal installation**. Th
 
 Leave **Download updates while installing Ubuntu** enabled. Leave **Install third-party software for graphics and Wi-Fi hardware and additional media formats** unchecked, matching the recorded configuration. Click **Continue**.
 
-**Screenshot 3:** Normal installation selected, update downloads enabled and third-party software disabled.
+<img width="960" height="564" alt="3" src="https://github.com/user-attachments/assets/1cec0f1c-c059-479a-8821-95cb451db211" />
 
 ## 4. Select the installation type
 
@@ -51,13 +52,14 @@ The installer reported that no operating systems were detected. Select **Erase d
 
 This option installs Ubuntu using the selected VM disk and deletes any existing contents on that disk. Check that the intended virtual disk is selected before confirming any disk changes. The disk confirmation dialog and partition details are not included in the screenshots.
 
-**Screenshot 4:** Erase disk and install Ubuntu selected.
+<img width="960" height="564" alt="4" src="https://github.com/user-attachments/assets/63f547b3-dd0d-4762-9ccf-3063cb80debe" />
 
 ## 5. Set the location
 
 On the **Where are you?** screen, select or enter **Perth** to configure the local time zone. Click **Continue**.
 
-**Screenshot 5:** Perth selected as the installation location.
+<img width="960" height="564" alt="5" src="https://github.com/user-attachments/assets/478e6745-4131-47f5-a9f7-4d53687568cf" />
+
 
 ## 6. Create the local account
 
@@ -78,7 +80,8 @@ The **Use Active Directory** checkbox is selected. The installer states that dom
 
 Click **Continue** after completing the account details.
 
-**Screenshot 6:** Local account details, password-required login and the Use Active Directory option selected.
+<img width="960" height="564" alt="6" src="https://github.com/user-attachments/assets/de149168-744a-4cc7-9f6e-4648da59594f" />
+
 
 ## 7. Allow installation to proceed
 
@@ -86,7 +89,8 @@ The installer displays the **Welcome to Ubuntu** slideshow while installation ta
 
 Allow the installation to finish. When prompted to restart, follow the installer prompts and remove or detach the installation media if requested. The completion and restart prompts are not captured in the supplied screenshots.
 
-**Screenshot 7:** Installation in progress, with the Ubuntu slideshow and file retrieval status visible.
+<img width="960" height="564" alt="7" src="https://github.com/user-attachments/assets/6280529b-20e6-4f2a-baa8-5e0865cc4e30" />
+
 
 ## 8. Reach the installed system's sign-in screen
 
@@ -94,7 +98,8 @@ The final screenshot shows the Ubuntu sign-in screen with the **admin-computer**
 
 The captured screen demonstrates that the system reached the graphical sign-in stage. A desktop session after entering the password is not shown in this screenshot set.
 
-**Screenshot 8:** Ubuntu sign-in screen for the local admin-computer account.
+<img width="960" height="564" alt="8" src="https://github.com/user-attachments/assets/947eed56-5492-4535-9acb-37d3f5e90595" />
+
 
 ## Recorded outcome
 
