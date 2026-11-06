@@ -2,6 +2,9 @@
 
 CyberForge 4.0 is an Edith Cowan University CSG3101 Applied Project. It combines a Proxmox-hosted enterprise IT environment with the Fischertechnik Smart Factory operational technology (OT) testbed. The capture-the-flag (CTF) exercises let red teams investigate two paths from enterprise access to an OT boundary while blue teams reconstruct activity from Wazuh telemetry.
 
+<img width="590" height="381" alt="image" src="https://github.com/user-attachments/assets/736df771-0276-49de-bfc1-b77c082eb30a" />
+
+
 ![CyberForge platform architecture showing red and blue teams, the Proxmox range, the factory and recovery](docs/diagrams/platform.svg)
 
 ## Get started
