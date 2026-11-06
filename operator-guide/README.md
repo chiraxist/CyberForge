@@ -1,0 +1,11 @@
+# Start and reset the CyberForge lab
+
+1. Get the approved management address, account and realm from the lab facilitator. Connect to the authorized management network or use the physical console. Confirm that the vulnerable range is isolated from production networks and the public internet before starting an exercise.
+2. Power on the Dell Proxmox host. Open `https://<proxmox-management-address>:8006`, verify the server identity with the facilitator, and sign in using your assigned realm. The report lists `192.168.0.137` for the Proxmox host agent. Verify the current management address at the host console.
+3. Select the host node and compare its VM list and each VM's **Hardware → Network Device** settings with the [inventory](inventory.md). Check bridge attachments and firewall policy before starting guests. Keep the physical OT link disconnected unless the facilitator has approved and supervised that portion.
+4. If restoring, start VM 108 or the designated PBS instance first, select the approved baseline and follow the [PBS restore guide](../Proxmox%20Backup%20Server%20(PBS)%20Tech%20Guides/restore_guide.md). Verify restored VM IDs, network devices and interfaces before powering on restored guests.
+5. Start AD (100) and verify DNS and domain services. For Scenario 1, start Staff1 (101), osTicket (103) and Mailcow (104). Start Staff2 (102) if required for the session. Start Admin (105) and JumpHost (106) for either exercise. Start VMs individually and confirm console access and expected service health before proceeding. Check host resources before adding guests.
+6. Start the blue endpoint and verify its Wazuh dashboard, agent status and recent events. Start the facilitator-issued red endpoint and connect it only to the approved scenario segment. Open the [CTF runner](../ctf-scenarios/).
+7. After the session, export approved evidence, shut down or revert the exercise guests as directed, restore the baseline, and recheck segmentation before the next run.
+
+See the [Proxmox build guide](../Proxmox%20Setup/Proxmox_Setup_Technical_Document_Instructions_Cyberforge_-_Ramin.md) for installation and the [Wazuh guides](../Wazuh%20Setup%20Instructions/) for monitoring setup.
