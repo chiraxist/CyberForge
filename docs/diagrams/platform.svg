@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" role="img">
+<title>CyberForge 4.0 platform architecture</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#263b50"/></marker></defs>
+<rect width="920" height="310" fill="#fff"/>
+<text x="20" y="32" font-size="21" font-weight="bold" font-family="sans-serif">CyberForge 4.0 platform architecture</text>
+<path d="M190 100H250" fill="none" stroke="#263b50" stroke-width="2"  marker-end="url(#a)"/>
+<path d="M485 100H550" fill="none" stroke="#263b50" stroke-width="2"  marker-end="url(#a)"/>
+<path d="M190 217H250" fill="none" stroke="#263b50" stroke-width="2"  marker-end="url(#a)"/>
+<path d="M367 185V133" fill="none" stroke="#263b50" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<path d="M485 119H513V217H550" fill="none" stroke="#263b50" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<rect x="20" y="68" width="170" height="65" rx="6" fill="#edf5fc" stroke="#395770"/>
+<text x="105.0" y="93" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#13273a">Red team</text>
+<text x="105.0" y="115" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#13273a">Kali endpoint</text>
+<rect x="250" y="68" width="235" height="65" rx="6" fill="#edf5fc" stroke="#395770"/>
+<text x="367.5" y="93" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#13273a">Proxmox cyber range</text>
+<text x="367.5" y="115" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#13273a">Enterprise IT and JumpHost</text>
+<rect x="550" y="68" width="350" height="65" rx="6" fill="#edf5fc" stroke="#395770"/>
+<text x="725.0" y="93" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#13273a">Fischertechnik Smart Factory</text>
+<text x="725.0" y="115" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#13273a">Physical OT · supervised access</text>
+<rect x="20" y="185" width="170" height="65" rx="6" fill="#edf5fc" stroke="#395770"/>
+<text x="105.0" y="210" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#13273a">Facilitator</text>
+<text x="105.0" y="232" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#13273a">Baseline and recovery</text>
+<rect x="250" y="185" width="235" height="65" rx="6" fill="#edf5fc" stroke="#395770"/>
+<text x="367.5" y="210" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#13273a">Proxmox Backup Server</text>
+<text x="367.5" y="232" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#13273a">Approved VM restore point</text>
+<rect x="550" y="185" width="350" height="65" rx="6" fill="#edf5fc" stroke="#395770"/>
+<text x="725.0" y="210" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#13273a">Blue team · Wazuh</text>
+<text x="725.0" y="232" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#13273a">Agent events, dashboard and triage</text>
+<text x="20" y="293" font-family="sans-serif" font-size="13">Solid arrows show exercise or operator access. Dashed arrows show recovery or telemetry.</text></svg>

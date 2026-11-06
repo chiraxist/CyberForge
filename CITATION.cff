@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use CyberForge 4.0, please cite it using this metadata."
+title: "CyberForge 4.0: Industry 4.0 Smart Factory Cyber Range for Red and Blue Teaming"
+type: software
+authors:
+  - family-names: Grover
+    given-names: Aarushi
+  - family-names: Appleyard
+    given-names: Brent
+  - family-names: Christie
+    given-names: Hamish
+  - family-names: Ahuja
+    given-names: Harjas
+  - family-names: Tucci
+    given-names: Kirsten
+  - family-names: Qambary
+    given-names: Ramin
+repository-code: https://github.com/chiraxist/CyberForge

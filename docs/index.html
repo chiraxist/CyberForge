@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CyberForge 4.0 CTF Simulation</title>
+<style>
+body{font:1rem/1.55 system-ui,sans-serif;background:#f1f6fc;color:#182d44;margin:0}
+main{max-width:850px;margin:auto;padding:2rem 1rem} section{background:white;border:1px solid #b7cce0;border-radius:.7rem;padding:1.25rem;margin:1rem 0} h1,h2{line-height:1.2}
+input,button,select{font:inherit;padding:.45rem;max-width:100%} button{background:#164e7d;color:white;border:0;border-radius:.35rem;cursor:pointer}button:disabled{opacity:.5;cursor:default}
+img{width:100%;height:auto} code{overflow-wrap:anywhere}
+</style>
+<main>
+<h1>CyberForge 4.0 CTF Simulation</h1>
+<p>Follow a three-stage red-team exercise and review the corresponding synthetic Wazuh events. The simulation runs locally in your browser.</p>
+<img src="diagrams/network.svg" alt="Lab network from simulated external segment through enterprise and administration to the OT boundary">
+<section>
+<label for="scenario">Scenario</label>
+<select id="scenario"><option value="phish">01 · Spear Phishing</option><option value="network">02 · Network Discovery</option></select>
+<button id="reset" type="button">Restart</button>
+<p id="score"></p>
+<h2 id="stage"></h2>
+<p id="action"></p>
+<button id="run" type="button">Run simulated action</button>
+<p id="artifact"></p>
+<form id="submission">
+<label for="flag">Flag from the artifact</label>
+<input id="flag" required autocomplete="off" spellcheck="false">
+<button id="submit">Submit flag</button>
+</form>
+<p id="status" role="status"></p>
+</section>
+<section><h2>Blue-team event timeline</h2><p>Identify the affected host, event sequence and a containment action for each stage.</p><ol id="events"></ol></section>
+<p><a href="https://github.com/chiraxist/CyberForge">Project repository and live lab guides</a></p>
+</main>
+<script>
+const scenarios = {
+  phish: [
+    ['Staff1', 'Replay the staged email and inspect the Staff1 exercise artifact.', 'Unexpected process execution after email attachment opened'],
+    ['Admin', 'Replay the staged help-desk ticket and inspect the Admin exercise artifact.', 'Admin execution and outbound connection following ticket activity'],
+    ['JumpHost', 'Replay the approved JumpHost access and inspect the boundary artifact.', 'Successful JumpHost login after failed authentication attempts']
+  ],
+  network: [
+    ['AD Server', 'Replay discovery and initial access to the legacy SMB service. Inspect the AD artifact.', 'SMB discovery followed by unusual AD host activity'],
+    ['Admin', 'Replay the remote login using the exercise identity and inspect the Admin artifact.', 'Remote Admin session using the exercise domain identity'],
+    ['JumpHost', 'Replay the approved JumpHost access and inspect the boundary artifact.', 'Remote login from Admin to JumpHost near the OT boundary']
+  ]
+};
+const byId = id => document.getElementById(id);
+let step, expected;
+function render() {
+  const scenario = byId('scenario').value;
+  const checkpoint = scenarios[scenario][step];
+  byId('score').textContent = 'Flags captured ' + step + ' / 3';
+  byId('stage').textContent = checkpoint ? 'Checkpoint ' + (step + 1) + ' · ' + checkpoint[0] : 'Exercise complete';
+  byId('action').textContent = checkpoint ? checkpoint[1] : 'Compare the three blue-team events and propose where to contain the attack.';
+  expected = '';
+  byId('flag').value = '';
+  byId('artifact').textContent = '';
+  byId('run').disabled = !checkpoint;
+  byId('submission').hidden = true;
+}
+function reset() {
+  step = 0;
+  byId('events').replaceChildren();
+  byId('status').textContent = '';
+  render();
+}
+byId('reset').addEventListener('click', reset);
+byId('scenario').addEventListener('change', reset);
+byId('run').addEventListener('click', () => {
+  const scenario = byId('scenario').value;
+  const [host, , event] = scenarios[scenario][step];
+  expected = 'FLAG{DEMO_' + scenario.toUpperCase() + '_' + (step + 1) + '}';
+  byId('artifact').textContent = host + ' artifact · ' + expected;
+  const item = document.createElement('li');
+  item.textContent = host + ' · ' + event;
+  byId('events').append(item);
+  byId('status').textContent = '';
+  byId('run').disabled = true;
+  byId('submission').hidden = false;
+  byId('flag').focus();
+});
+byId('submission').addEventListener('submit', event => {
+  event.preventDefault();
+  if (!expected || byId('flag').value.trim() !== expected) {
+    byId('status').textContent = 'Flag did not match. Check the current artifact.';
+    return;
+  }
+  step += 1;
+  render();
+  byId('status').textContent = 'Flag accepted.';
+  (step === 3 ? byId('reset') : byId('run')).focus();
+});
+reset();
+</script>
+</html>
