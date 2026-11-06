@@ -1,6 +1,6 @@
 # CyberForge 4.0 — Industry 4.0 Smart Factory Cyber Range for Red and Blue Teaming
 
-CyberForge 4.0 is an Edith Cowan University CSG3101 Applied Project. It combines a Proxmox-hosted enterprise IT environment with the Fischertechnik Smart Factory operational technology (OT) testbed. The capture-the-flag (CTF) exercises let red teams investigate two paths from enterprise access to an OT boundary while blue teams reconstruct activity from Wazuh telemetry.
+CyberForge 4.0 is an Edith Cowan University CSG3101 Applied Project, supervised by Dr Ahmad Mohsin. It combines a Proxmox-hosted enterprise IT environment with the Fischertechnik Smart Factory operational technology (OT) testbed. The capture-the-flag (CTF) exercises let red teams investigate two paths from enterprise access to an OT boundary while blue teams reconstruct activity from Wazuh telemetry.
 
 <img width="590" height="381" alt="image" src="https://github.com/user-attachments/assets/736df771-0276-49de-bfc1-b77c082eb30a" />
 
@@ -26,6 +26,6 @@ Run live exercises on the authorized lab range with its external uplink isolated
 
 ## Citation
 
-Grover, A., Appleyard, B., Christie, H., Ahuja, H., Tucci, K., & Qambary, R. (2026). *CyberForge 4.0: Industry 4.0 smart factory cyber range for red and blue teaming* [Software]. Edith Cowan University. https://github.com/chiraxist/CyberForge
+Grover, A., Appleyard, B., Christie, H., Ahuja, H., Tucci, K., & Qambary, R., Nnadiya.N, Mohsin.A, (2026). *CyberForge 4.0: Industry 4.0 smart factory cyber range for red and blue teaming* [Software]. Edith Cowan University. https://github.com/chiraxist/CyberForge
 
 See [CITATION.cff](CITATION.cff) for machine-readable metadata. The CSG3101 final project report lists Dr Ahmad Mohsin and Nandiya as supervisors.
